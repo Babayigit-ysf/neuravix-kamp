@@ -34,8 +34,8 @@ def gorevleri_yukle(dosya_yolu):
         boylam = coords[0]
         enlem = coords[1]
 
-        ad = props.get("name") or props.get("ad") or props.get("id") or "İsimsiz"
-        aciklama = props.get("description") or props.get("aciklama") or "-"
+        ad = props.get("name","İsimsiz") 
+        aciklama = props.get("description","-")
 
         noktalar.append(GorevNoktasi(ad, aciklama, enlem, boylam))
 
